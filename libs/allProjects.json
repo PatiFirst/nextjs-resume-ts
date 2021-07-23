@@ -1,0 +1,95 @@
+{
+    "shirband": {
+        "title": "ShirBand",
+        "subtitle": "A clothing shopping online for women on web application",
+        "description": "This is a project in the course Web Programming of Media Technology and I am full stack developer to make a shopping page and admin page. In front-end, I have made that with HTML, CSS, JavaScript and Bootstrap. And Back-end, I use Firebase for Database and Hosting this web app.",
+        "image":[
+            "/images/Shirband.jpg",
+            "/images/Shirband-1.jpg",
+            "/images/Shirband-2.jpg",
+            "/images/Shirband-3.jpg",
+            "/images/Shirband-4.jpg",
+            "/images/Shirband-5.jpg"
+        ],
+        "button": [
+            {
+                "title": "Web",
+                "link": "https://projectwebshirband.web.app/"
+            }
+        ]
+    },
+    "arproject":{
+        "title": "Muscular (Lower)",
+        "subtitle": "An AR application about Muscular System (Lower Boudy)",
+        "description": "This is a mini-project in the course of Media Technology. This is an AR application for learning an anatomy about Lower Muscular System with Marker-based AR. This app is made with Unity to make a application and Vuforia to build and run AR in this application",
+        "image":[
+            "/images/ARProject.png",
+            "/images/ARProject-1.jpg",
+            "/images/ARProject-2.png",
+            "/images/ARProject-3.png"
+        ],
+        "button": [
+            {
+                "title": "Android",
+                "link": "https://drive.google.com/file/d/1KIzc-zOuonx5lientLaZTIwAFcISwHLe/view"
+            },            {
+                "title": "Video Preview",
+                "link": "https://drive.google.com/file/d/1CRA-QoUN4fCnHbqpgfZLcgg5dQ7smcaS/view"
+            }
+        ]
+    },
+    "heartcir":{
+        "title": "HeartCir",
+        "subtitle": "A 3D Instruction programme about Blood Circulation System with heart rate module",
+        "description": "This is a mini-project in the course of Media Technology. HeartCir is made with Unity and the heart rate module is made with Arduino. HeartCir is simulate a heartbeat of human heart. This programme has 2 system. First system, you can set rate to show how heart rate. Another system is a real time, you can use the heart rate module to show how your heart beats",
+        "image": [
+            "/images/HeartCir.png",
+            "/images/HeartCir-1.png",
+            "/images/HeartCir-3.png"
+        ],
+        "button": [
+            {
+                "title": "Video Preview",
+                "link": "https://youtu.be/X7yEBloXK94"
+            }
+        ]
+    },
+    "rescape":{
+        "title": "Rescape",
+        "subtitle": "A VR game with heart rate module to escape the robots",
+        "description": "This is a project in NSC2021. Rescape is a VR-RPG game that made with Unity and play with heart rate module that made with Arduino. I'm responsible to make a heart rate module and design some map in this game The heart rate module during in this game is show on right hand and depend on a Detect Circle. If detect circle is detect to a robot, the game will restart. So If detect circle is wider, player will escape harder.Rescape is a game about Teen who is growing up with MOM that is a robot. One Day, he find Will who have injury and talking with him how to escape this place with the robots.",
+        "image": [
+            "/images/NSC_Game.jpg",
+            "/images/NSC_Game-1.jpg",
+            "/images/NSC_Game-2.jpg",
+            "/images/NSC_Game-3.jpg",
+            "/images/NSC_Game-4.jpg",
+            "/images/NSC_Game-5.jpg"
+        ],
+        "button": [
+            {
+                "title": "Video Preview",
+                "link": "https://drive.google.com/file/d/1kEpxlvqrxghsHULicMpEUkON8ut_vOXo/view"
+            }
+        ]
+    },
+    "sweetboyrunner":{
+        "title": "SweetBoy Runner",
+        "subtitle": "A 3D endless game",
+        "description": "This is a mini-project in the course Computer Programming of Media Technology. SweetBoy Runner is a 3D endless game that made with Unity. This game is about a boy who runs to collect as many snacks as possible. When running into an object, the game will be over.",
+        "image": [
+            "/images/SBPoster.jpg",
+            "/images/SBPoster-1.jpg",
+            "/images/SBPoster-2.jpg",
+            "/images/SBPoster-3.jpg"
+        ],
+        "button": [
+            {
+                "title": "Video Preview",
+                "link": "https://drive.google.com/file/d/1aJGI9oiezi-ZVZqdJizUgfp-2EtVXtoe/view"
+            }
+        ]
+    }
+}  
+    
+    
