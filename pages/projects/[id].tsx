@@ -1,4 +1,4 @@
-import { GetStaticProps, GetStaticPaths, NextPage, NextPageContext } from 'next'
+import { GetStaticProps, GetStaticPaths, NextPage, GetServerSidePropsContext, NextPageContext } from 'next'
 import React, { ReactElement } from 'react'
 import { Data } from '../../models/modelProject'
 // import projects from '../../libs/newAllProjects.json'
@@ -8,23 +8,25 @@ import styles from '../../styles/Project.module.css'
 import { Space, Image, Button } from 'antd'
 import Link from 'next/link'
 
-// interface Props{
-//     project: Data
-// }
 interface Props{
-    data: Data
+    project: Data
 }
+// export interface Props{
+//     data: Data
+// }
 
-export default function Project({data}: Props) {
-    const images = data.image
-    const buttons = data.button
+// export type ProjectDetailProps = Data
+
+export default function Project({project}: Props) {
+    const images = project.image
+    const buttons = project.button
 
     return (
         <Layout>
              <div className={styles.projectCon}>
-                 <h1>{data.title}</h1>
-                 <h3>{data.subtitle}</h3>
-                <p>{data.description}</p>
+                 <h1>{project.title}</h1>
+                 <h3>{project.subtitle}</h3>
+                <p>{project.description}</p>
                 
                  <div className={styles.projectImgCon}>
                      <Space size="large">
@@ -66,47 +68,47 @@ export default function Project({data}: Props) {
     )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-    const data = await import('../../libs/allProjects.json')
-    const paths = Object.keys(data).map((thisData) => ({
-        params: {id: thisData},
-    }))
+Project.getInitialProps = async ({ query }) => {
+    // const projId: Proj = query.id
+    // console.log(typeof(query))
+    const project = query.id
+    const proj: Data = projects[query.id]
+    // console.log(typeof(proj))
     return{
-        fallback: false,
-        paths 
+        project: proj
     }
 }
 
-interface Params{
-    params: any
-}
-
-export const getStaticProps: GetStaticProps = async({params}: Params) => {
-  const detail = await import('../../libs/allProjects.json')
-  let data 
-  if(typeof(detail) !== 'undefined') {
-      data = detail[params.id]
-  }
-  else{
-      data = {}
-  }
-  return{
-    props: {
-      data
-    }
-  }
-}
-
-
-
-// interface Proj{
-//     proj: object
-//     query: any
-// }
-
-// Project.getInitialProps = async ({query}: NextPageContext) => {
-//     const proj = projects[query.id]
+// export const getStaticPaths: GetStaticPaths = async () => {
+//     const data = await import('../../libs/allProjects.json')
+//     const myData = data.default
+//     const paths = Object.keys(myData).map((thisData) => ({
+//         params: {id: thisData},
+//     }))
 //     return{
-//         project: proj
+//         fallback: false,
+//         paths 
 //     }
 // }
+
+// export const getStaticProps: GetStaticProps= async({query}) => {
+// //   const detail  = await import('../../libs/allProjects.json')
+// //   const myObj = detail.default
+    
+//     console.log(query.id)
+//   let data
+//   if(typeof(projects) !== 'undefined') {
+//       data = projects[query.id]
+//   }
+//   else{
+//       data = {}
+//   }
+//   return{
+//     props: {
+//       data
+//     }
+//   }
+// }
+
+
+
